@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <title>Faltas Abonadas</title>
+</head>
+<body>
+<h1>Faltas Abonadas</h1>
+    <div class="content">
+        <ol class="list-group">
+            {% for falta in faltas_abonadas %}
+                <li class="list-group-item">{{ falta.funcionario.get_full_name }} - {{ falta.data_falta|date }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</body>
+</html>

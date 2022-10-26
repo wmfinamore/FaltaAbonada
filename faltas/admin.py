@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import FaltaAbonada
 
-# Register your models here.
+
+class FaltaAbonadaAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(FaltaAbonada, FaltaAbonadaAdmin)

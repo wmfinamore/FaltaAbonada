@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import FaltaAbonada
 
-# Create your views here.
+
+class FaltasListView(ListView):
+    model = FaltaAbonada
+    context_object_name = 'faltas_abonadas'
