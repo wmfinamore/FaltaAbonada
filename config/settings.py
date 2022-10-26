@@ -143,3 +143,5 @@ CACHES = {
                 "LOCATION": env.str('REDIS_LOCATION'),
                 }
 }
+
+CACHE_TIME = env.int('CACHE_TIME')
